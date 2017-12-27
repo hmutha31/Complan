@@ -15,18 +15,18 @@ $("#button").click(function()
         xhr.setRequestHeader('Authorization', make_base_auth(name, pass));
     },
     success: function (data) {
-    	console.log(data);
+    			console.log(data);
     	// window.load("devices.html");
-    	var token;
+    	        var token;
                	token=data.token;
                	console.log(token);
                
     	}
     }
+    )
 
     })
-  }//end of click
-	)//end of click
+  
 
 });
 
