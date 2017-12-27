@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Device Sessions</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="calls.css">
+  <script type="text/javascript" src="calls.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <!-- <script src="jquery.js" type="text/javascript"></script>  -->
+
+</head>
+<body>
+  <div class="body1">
+ <div class="row header">
+ 	<div class="col-sm-3 col-md-3 col-lg-3">
+ 		<div class="logo">
+ 			<img src="complanlogo.jpeg" id="logo" class="img-fluid ">
+ 		</div>
+ 	</div>
+ 	<div class="col-sm-8 col-md-9 col-lg-9">
+ 		<div class="title">
+ 		<h1 id="title"> Device Session  </h1>
+ 	</div>
+ 	</div>
+ </div>
+
+<!--  space to add date filter -->
+
+<div class="form">
+	<div class="filter">
+		<label id="label">Select Date : </label>
+		<input type="date" name="date" placeholder="YYYY-MM-DD" id="selected_date" required pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}">
+		<br>
+		<button onclick="getData()"  class="btn btn-danger formbtn"> Submit</button>
+	</div>
+</div>
+
+<div class="modal fade" id="enlargeImageModal" tabindex="-1" role="dialog" aria-labelledby="enlargeImageModal" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+        </div>
+        <div class="modal-body">
+          <img src="" class="enlargeImageModalSource" style="width: 100%; height: auto; margin: 5px;">
+        </div>
+      </div>
+    </div>
+</div>
+
+
+ <!-- <div class="modal fade" id="imgmod">
+ 	<div class="modal-dialog modal-lg">
+ 		<div class="modal-content">
+ 			<div class="modal-header">
+ 				<h3> Image </h3>
+ 				<button class="close">&times</button>
+ 			</div>
+ 			<div class="modal-body">
+ 				<img src="" class="lazy" id="modalImage" width="100%" height="100%">
+ 			</div>
+ 		</div>
+ 	</div>
+ </div> -->
+
+ <div class="sessionTable">
+ 	<h2> Sessions Information </h2>
+ 	<br>
+ 	<table class="table table-bordered table-hover table-responsive-sm sessTable">
+ 		<tr>
+ 			<td class="heading" colspan="1" rowspan="1"> Sr. No </td>
+ 			<td class="heading" colspan="1" rowspan="1"> Promoter </td>
+            <td class="heading" colspan="1" rowspan="1"> Type </td>
+            <td class="heading" colspan="1" rowspan="1"> Consumer Mobile </td>
+            <td class="heading" colspan="1" rowspan="1"> Feedback Text </td>
+            <td class="heading" colspan="1" rowspan="1"> Location(Lat/Long) </td>
+            <td class="heading" colspan="1" rowspan="2"> Recordings </td>
+            <td class="heading" colspan="1" rowspan="1"> Photo </td>
+            <td class="heading" colspan="1" rowspan="1" id="dnt"> Date & Time </td>
+            <td class="heading" colspan="6" rowspan="1"> Choices </td> 	
+            <td class="heading" colspan="12" rowspan="1"> Interactions </td>		
+ 		</tr>
+ 		<tr>
+ 		</tr>
+ 		<tr>
+ 		</tr>
+ 		<tr>
+ 			<td></td>
+ 			<td></td>
+ 			<td></td>
+ 			<td></td>
+ 			<td></td>
+ 			<td></td>
+ 			<td></td>
+ 			<td></td>
+ 			<td></td>
+ 			<td class="heading"> Complan </td>
+ 			<td class="heading"> Horlicks </td>
+ 			<td class="heading"> Boost </td>
+ 			<td class="heading"> Bournvita </td>
+ 			<td class="heading"> Other </td>
+ 			<td class="heading"> None </td>
+ 			<td class="heading"> New Call </td>
+ 			<td class="heading"> Start </td>
+ 			<td class="heading"> Protein Challenge </td>
+ 			<td class="heading"> Video </td>
+ 			<td class="heading"> Promotion Offer </td>
+ 			<td class="heading"> Sale </td>
+ 			<td class="heading"> Sample </td>
+ 			<td class="heading"> Mobile </td>
+ 			<td class="heading"> Otp </td>
+ 			<td class="heading"> Dosage </td>
+ 			<td class="heading"> Feedback </td>
+ 			<td class="heading"> End </td>
+ 		</tr>
+ 		<tbody id="tbody">
+ 		</tbody>
+ 	</table>
+</body>
+</html>

@@ -1,0 +1,228 @@
+#title
+{
+	text-align:left;
+	font-size: 20px;	
+	margin:10px 15px;
+	color: 	#B02121;
+	
+	
+}
+body
+{
+	overflow-x: hidden;
+}
+#logo
+{
+	margin:15px 10px;
+	margin-left: 20px;
+	height:75px;
+	width:auto;
+	text-align: center;
+	align-items: center;
+}
+.header
+{
+ background-color: #e3e3e5;
+ margin-bottom: 10px;
+
+}
+.chartHeading
+{
+	text-align: center;
+	font-size:25px;
+	color: #717274;
+}
+.data
+{
+	text-align: center;
+	font-size: 25px;
+	margin-top: 10%;
+	height:auto;
+	min-height: 40%;
+	width: 100%;
+	min-width: 100%;
+	color: #717274;
+}
+td
+{
+	padding: 10px;
+}
+/*#collapseButton
+{
+	background-color: white;
+	width: 70%;
+	min-width: 100%;
+	height: auto;
+		border-radius: 10px;
+		text-align: center;
+		border:white;
+}*/
+/*#buttonLabel
+{
+	text-align: center;
+	font-size:20px;
+	color: #717274;
+}*/
+#buttonText
+{
+	color: #330000;
+	font-weight: bold;
+	font-size: 20px;
+
+}
+#arrow
+{
+	text-align: center;
+	background-color: none;
+	border:none;
+	position: relative;
+	right:35px;
+}
+#deviceList
+{
+	text-align: center;
+	text-align: center;
+	font-size: 20px;
+	
+	height:auto;
+	min-height: 40%;
+	width: 100%;
+	min-width: 100%;
+	color: #717274;
+}
+#deviceTitle
+{
+	text-align: center;
+	color: #717274;
+	margin-top:20px;
+	margin-bottom:2%;
+	text-decoration: underline;
+
+}
+.deviceData
+{
+	/*display: none;*/
+	overflow-x: scroll;
+	margin-left: 5px;
+}
+a:hover
+{
+	text-decoration: none;
+}
+a:link
+{
+	color: #717274;
+	text-decoration: none;
+}
+a:visited
+{
+	color: #717274;
+	text-decoration: none;
+}
+.deviceLink:link
+{
+   color: #717274;
+   text-decoration: none;
+}
+.deviceLink:visited
+{
+	color: #717274;
+   text-decoration: none;
+}
+#downicon
+{
+	font-size: 80px;
+	color: #717274;
+	text-align: center;
+}
+
+
+
+/*media query for screens less than 400px*/
+
+@media all and (max-width: 500px)
+{
+	#title {
+		text-align: center;
+		font-size:20px;
+		color: 	#B02121;
+	} 
+	#logo
+	{
+		/*margin: 10px;
+		margin-left:50px;*/
+		margin-left:100px;
+		margin-top:10px;
+		position: center;
+
+		text-align: center;
+	}
+	#downicon
+	{
+		position: relative;
+		margin-left:50px;
+	}
+	#arrow
+	{
+		border:none;
+		background-color: white;
+		width: 100%;
+		text-align: center;
+	}
+	.body1
+	{
+		width: 100%;
+		height: 100%;
+	}
+	.deviceList
+	{
+		overflow-x: scroll;
+		display: block;
+		white-space: nowrap;
+	}
+}
+
+@media all and (min-width: 700px)
+{
+	#title
+	{
+		text-align: center;
+		font-size: 25px;
+		margin-top:25px;
+		
+	}
+	#logo
+	{
+		margin-right: 20px;
+		margin-left: 10px;
+		margin-top: 20px;
+		height: 60px;
+	}
+	.body1
+	{
+		width: 100%;
+		height: 100%;
+	}
+}
+
+@media all and (min-width: 1000px)
+{
+	#title
+	{
+		text-align: left;
+		font-size: 30px;
+		position: relative;
+		left:7vw;
+		margin-top:25px;
+	}
+	#logo
+	{
+		margin-left:30px;
+		margin-top: 10px;
+	}
+	.body1
+	{
+		width: 100%;
+		height: 100%;
+	}
+}

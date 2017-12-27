@@ -1,0 +1,152 @@
+#title
+{
+	text-align:center;
+	font-size: 30px;	
+	
+	color: 	#B02121;
+	margin-top:35px;
+	
+}
+#logo
+{
+	margin:15px 5px;
+	
+	height: 75px;
+	}
+.header
+{
+ background-color: #e3e3e5;
+ margin-bottom: 20px;
+ width: 100%;
+ text-align: center;
+ min-width: 100%;
+
+}
+body
+{
+	overflow-x: hidden;
+}
+.sessTable
+{
+	text-align: center;
+	font-size: 15px;
+	padding: 5px;
+	color: #717274;
+	display: block;
+	overflow-x: scroll;
+	overflow-y: auto;
+	white-space: nowrap;
+	width: 100%;
+	min-width: 100%;
+	border:none;
+	
+}
+
+h2
+{
+	color: #717274;
+	text-align: center;
+	text-decoration: underline;
+}
+img
+{
+	cursor: zoom-in;
+}
+#label
+{
+	font-size: 25px;
+	color: #717274;
+	text-align: center;
+}
+.form
+{
+	text-align: center;
+}
+input
+{
+	font-size: 25px;
+	color: #717274;
+	border-radius: 15px;
+	border:1px solid #717274;
+	text-align: center;
+}
+.formbtn
+{
+	margin-top:10px;
+	margin-bottom: 10px;
+	color:  white;
+	font-size: 25px;
+	background-color: #B02121;
+	border-radius: 15px;
+}
+.modal
+{
+	background-color: #e3e3e5;
+}
+
+/*adding media queries*/
+
+
+/*@media all and (max-width: 500px)
+{
+	#title
+	{
+		font-size: 25px;
+		/*text-align: center;
+*/		/*margin-top:15px;
+		position: relative;
+		left:90px;
+	}
+	#logo
+	{
+		position: relative;
+		left:125px;
+		height: 45px;
+		margin: auto;
+	}
+	.header
+	{
+		width: 150%;
+	}
+}*//**/
+
+@media all and (min-width: 1000px)
+{
+	#title
+	{
+		text-align: left;
+		margin-left: 13vw;
+	}
+	.header
+	{
+		width:110%;
+	}
+}
+
+@media all and (max-width: 500px)
+{
+	#title
+	{
+		text-align: center;
+		
+		font-size: 20px;
+        margin-top: 10px;
+	}
+	body
+	{
+		overflow-x: hidden;
+		width: 110%;
+	}
+	.header
+	{
+		display: block;
+		width: 100%;
+		background-size:cover;
+	}
+	#logo
+	{
+		margin-left:0;
+		position: relative;
+		left:2vw;
+	}
+}

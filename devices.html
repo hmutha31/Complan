@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Complan Home</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="devices1.js"></script> 
+ <link rel="stylesheet" type="text/css" href="devices.css">
+<script type="text/javascript" src="devices2.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<div class="body1">
+ <div class="row header">
+ 	<div class="col-sm-3 col-md-3 col-lg-3">
+ 		<div class="logo">
+ 			<img src="complanlogo.jpeg" id="logo" class="img-fluid float-right">
+ 		</div>
+ 	</div>
+ 	<div class="col-sm-8 col-md-9 col-lg-9">
+ 		<div class="title">
+ 		<h2 id="title"> Complan Promoters Record </h2>
+ 	</div>
+ 	</div>
+ </div>
+ <div class="row body">
+ 	<div class="col-sm-3 col-md-3 col-lg-3">
+ 		<div class="chart1">
+ 			<h3 class="chartHeading"> Cumulative </h3>
+
+                <canvas id="myChart1" width="40" height="35"> </canvas>
+</div>
+</div>
+<div class="col-sm-6 col-md-6 col-lg-6">
+	<div class="table">
+		<!-- add table -->
+		<table class="data table-bordered table-hover table-responsive">
+                <tr>
+                    <td></td>
+                    <td class="heading"> Today </td>
+                    <td class="heading"> Cumulative </td>
+                </tr>
+                <tr>
+                    <td class="subHeading"> Complete Calls </td>
+                    <td id="completeCallsToday"> </td>
+                    <td id="completeCallsAllTime"> </td>
+                </tr>
+                <tr>
+                    <td class="subHeading"> Sample </td>
+                    <td id="sampleToday"> </td>
+                    <td id="sampleAllTime"> </td>
+                </tr>
+                <tr>
+                    <td class="subHeading"> Sale </td>
+                    <td id="saleToday"></td>
+                    <td id="saleAllTime"> </td>
+                </tr>
+            </table>
+	</div>
+</div>
+<div class="col-sm-3 col-md-3 col-lg-3">
+	<div class="chart2">
+		<h3 class="chartHeading"> Today </h3>
+            
+             <!-- chart 1 starts -->
+              <canvas id="myChart2" width="40" height="35"> </canvas>
+</div>
+</div>
+</div>
+<!-- collapsible for device listing -->
+<!-- <div class="row">
+	<div class="col-sm-6 col-md-6 col-lg-6"></div>
+	<div class="col-sm-1 col-md-1 col-lg-1">
+		<div id="button">
+			<button type="button" class="btn" id="collapseButton" onclick="toggle()"><a href="#deviceList"><h2 id="buttonText"> <i class="far fa-angle-down" id="icon"></i>   </h2></a>
+ <!-- </button> 
+<!--  <button type="button" id="arrow" onclick="toggle()"> <a href="#deviceList" id="link"> <i class="fa fa-angle-down" aria-hidden="true" id="downicon"></i></a></button> -->
+ <!-- <div class="col-sm-5 col-md-5 col-lg-5"></div>
+</div>
+</div>
+</div>
+</div> --> 
+<div class="row deviceData" id="dd">
+	<div class="col-sm-12 col-md-12 col-lg-12">
+		<div class="deviceList">
+			<h2 id="deviceTitle"> Device Listings </h2>
+			<table id="deviceList" class="table table-bordered table-hover table-responsive">
+				<tr>
+					<td class="deviceHeadings"> ID </td>
+					<td class="deviceHeadings"> Name </td>
+					<td class="deviceHeadings" colspan="2"> Complete Calls  </td>
+					<td class="deviceHeadings" colspan="2"> Incomplete Calls </td>
+					<td class="deviceHeadings" colspan="2"> Sale </td>
+					<td class="deviceHeadings" colspan="2"> Sample </td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td class="deviceHeadings"> Today </td>
+					<td class="deviceHeadings"> Cumulative </td>
+					<td class="deviceHeadings"> Today </td>
+					<td class="deviceHeadings"> Cumulative </td>
+					<td class="deviceHeadings"> Today </td>
+					<td class="deviceHeadings"> Cumulative </td>
+					<td class="deviceHeadings"> Today </td>
+					<td class="deviceHeadings"> Cumulative </td> 
+				</tr>
+				<tbody id="tbody">
+				</tbody>
+			</table>
+
+</body>
+</html>
