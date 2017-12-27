@@ -60,6 +60,7 @@ console.log(token);
         },
         success : function(data,status)
         {
+        	$("tbody").html("");
         	$.each(data.devices,function(index,element)
          {
            console.log("inside each");
