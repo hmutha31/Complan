@@ -216,8 +216,8 @@ setInterval(createChart2,refreshTime);
 $(function()
 {
    getData();
-   //createChart1();
-   //createChart2();
+   createChart1();
+   createChart2();
    console.log(document.cookie);
    // toggle();
 	});
