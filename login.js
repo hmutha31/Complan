@@ -8,7 +8,7 @@ $("#button").click(function()
     $.ajax(
     {
     	type: 'POST',
-    url: 'http://dev.virtualveda.in/vv/len/h2h/api/public/user/login',
+    url: "http://dev.virtualveda.in/h2h_api/user/login",
     dataType: 'json',
     //whatever you need
     beforeSend: function (xhr) {
@@ -25,7 +25,7 @@ $("#button").click(function()
 
 });
 
-
+// http://dev.virtualveda.in/vv/len/h2h/api/public/user/login'
 
 	
   function make_base_auth(user,password)
