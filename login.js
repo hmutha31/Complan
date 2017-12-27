@@ -27,8 +27,20 @@ $("#button").click(function()
     	        var token;
                	token=data.token;
                	console.log(token);
+               	$("#errormsg").text("");
+               	document.cookie="token:" + data.token;
+               	var x=document.cookie;
+               	console.log(x);
+               	// location.href="devices.html";
                
-    	}
+    	},
+    error : function(xhr)
+    {
+    	console.log(xhr.status,"Error"),
+    	$("#name").val(""),
+    	$("#password").val(""),
+    	$("#errormsg").text("Incorrect Username or Password !")
+    }
     }
     )
 
@@ -48,13 +60,7 @@ $("#button").click(function()
   	var tok = name + ':' + pass;
     var hash = btoa(tok);
     console.log(hash);
-    // $.cookie("username" , user);
-    // $.cookie("password" , password);
-   //  document.cookie="username="+user;
-   //  document.cookie="password="+password;
-   // var x =decodeURIComponent(document.cookie);
-   //  console.log(x);
-    // console.log($.cookie("username"));
+   
     return  hash;
   }
 

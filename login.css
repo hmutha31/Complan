@@ -36,3 +36,8 @@ input::placeholder
 	text-align: center;
 	margin-top:20px;
 }
+
+#errormsg
+{
+	color:red;
+}
