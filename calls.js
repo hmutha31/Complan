@@ -35,7 +35,7 @@ function getData()
     	date = "/"+date;
     }
     console.log(date);
-	var api_url = "http://dev.virtualveda.in/h2h_api/public/mis/calls/"+c+date;
+	var api_url = "http://dev.virtualveda.in/h2h_api/mis/calls/"+c+date;
 	var url_link = new URL(api_url);
 	console.log(url_link);
 	var rec1_string="";
