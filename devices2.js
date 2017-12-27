@@ -10,8 +10,8 @@ function readCookie(name) {
     return null;
 }
 
-var token=readCookie('token');
-console.log(token);
+// var token=readCookie('token');
+// console.log(token);
 // http://dev.virtualveda.in/vv/len/h2h/api/public/mis/devices
 
 // function getDeviceListing_old()
@@ -47,6 +47,8 @@ console.log(token);
 
 function getDeviceListing()
 {
+	var token=readCookie('token');
+console.log(token);
 	$.ajax(
 	{
        type : 'GET' ,
