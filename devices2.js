@@ -52,7 +52,7 @@ console.log(token);
 	$.ajax(
 	{
        type : 'GET' ,
-       url: 'http://dev.virtualveda.in/h2h_api/user/stats',
+       url: 'http://dev.virtualveda.in/h2h_api/mis/devices',
         dataType: 'json',
         //whatever you need
         beforeSend: function (xhr) {
