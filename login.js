@@ -46,8 +46,8 @@ $("#button").click(function()
     // $.cookie("password" , password);
     document.cookie="username="+user;
     document.cookie="password="+password;
-   
-    console.log(document.cookie);
+   var x =decodeURIComponent(document.cookie);
+    console.log(x);
     // console.log($.cookie("username"));
     return 'Basic ' + hash;
   }
