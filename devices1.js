@@ -1,38 +1,50 @@
 var refreshTime=30000;//to refresh data
+ function readCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1,c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+}
 
+var token=readCookie('token');
+console.log(token);
 
 // "http://dev.virtualveda.in/vv/len/h2h/api/public/calls/stats"
 
-function getData_old() //function to get JSON 
-{
-   $.getJSON("http://dev.virtualveda.in/vv/len/h2h/api/public/calls/stats" ,function(data,status)
-      {
-          if(status=="error" || status=="notmodified" || status=="timeout" || status=="parsererror")
-          {
-          	console.log("check link!");
-          }
-          else
-          {
-          try
-          {
-          console.log("inside func");
-          $("#completeCallsToday").text(validate(data.stats["complete_calls"].today));
-          $("#completeCallsAllTime").text(validate(data.stats["complete_calls"].alltime));            
-          console.log("end of row1");
-           $("#sampleToday").text(validate(data.stats["sample"].today));
-           $("#sampleAllTime").text(validate(data.stats["sample"].alltime));
-           console.log("end of row2");
-           $("#saleToday").text(validate(data.stats["sale"].today));
-           $("#saleAllTime").text(validate(data.stats["sale"].alltime));  
-              }
-            catch(e)
-            {
-            	console.log("check api!");
-            }
-          }
-    }) //brackets for JSON fn
+// function getData_old() //function to get JSON 
+// {
+//    $.getJSON("http://dev.virtualveda.in/vv/len/h2h/api/public/calls/stats" ,function(data,status)
+//       {
+//           if(status=="error" || status=="notmodified" || status=="timeout" || status=="parsererror")
+//           {
+//           	console.log("check link!");
+//           }
+//           else
+//           {
+//           try
+//           {
+//           console.log("inside func");
+//           $("#completeCallsToday").text(validate(data.stats["complete_calls"].today));
+//           $("#completeCallsAllTime").text(validate(data.stats["complete_calls"].alltime));            
+//           console.log("end of row1");
+//            $("#sampleToday").text(validate(data.stats["sample"].today));
+//            $("#sampleAllTime").text(validate(data.stats["sample"].alltime));
+//            console.log("end of row2");
+//            $("#saleToday").text(validate(data.stats["sale"].today));
+//            $("#saleAllTime").text(validate(data.stats["sale"].alltime));  
+//               }
+//             catch(e)
+//             {
+//             	console.log("check api!");
+//             }
+//           }
+//     }) //brackets for JSON fn
 
-} //end of fn getData 
+// } //end of fn getData 
 
 function getData() //function to get JSON 
 {
@@ -43,7 +55,7 @@ function getData() //function to get JSON
         dataType: 'json',
         //whatever you need
         beforeSend: function (xhr) {
-            xhr.setRequestHeader('Authorization', "Bearer b12527a62b8546d6");
+            xhr.setRequestHeader('Authorization', "Bearer "+token);
         },
         success: function(data,status)
         {
@@ -53,8 +65,6 @@ function getData() //function to get JSON
           }
           else
           {
-            try
-            {
                   console.log("inside func");
                   $("#completeCallsToday").text(validate(data.stats["complete_calls"].today));
                   $("#completeCallsAllTime").text(validate(data.stats["complete_calls"].alltime));            
@@ -64,11 +74,6 @@ function getData() //function to get JSON
                    console.log("end of row2");
                    $("#saleToday").text(validate(data.stats["sale"].today));
                    $("#saleAllTime").text(validate(data.stats["sale"].alltime));  
-            }
-            catch(e)
-            {
-                console.log("check api!");
-            }
           }
         }
     }); //brackets for JSON 
@@ -87,71 +92,94 @@ function validate(obj) //function to validate content of obj
 
 function createChart1()
 {
-	console.log("1");
-	var chartRefresh=10000;
-    $.getJSON("http://dev.virtualveda.in/h2h_api/user/stats" ,function(data)
-    {
-var ctx = document.getElementById("myChart1");
-var myChart1 = new Chart(ctx, {
-    type: 'pie',
-    data: {
-        labels: ["Sale", "Sample"],
-        datasets: [{
-            label: 'All Time',
-            data: [data.stats["sale"].alltime, data.stats["sample"].alltime],
-            backgroundColor: [
-                '#f1183b',
-                '#929091',
-            ],
-            borderColor: [
-                'white',
-                'white',
-            ],
-            borderWidth: 1
-        }]
-    },
-    options: {
-    	 legend :
-         {
-         	position:"bottom"
-         }
-    }
-})
-});
+	$.ajax(
+	{
+					type:'GET',
+					url : "http://dev.virtualveda.in/h2h_api/user/stats",
+					dataType:'json',
+					headers :
+					{
+						'Authorization' : 'Bearer '+token
+					},
+					success : function(data)
+					{
+				console.log("1");
+				var chartRefresh=10000;
+			    
+			var ctx = document.getElementById("myChart1");
+			var myChart1 = new Chart(ctx, 
+			{
+			    type: 'pie',
+			    data: {
+			        labels: ["Sale", "Sample"],
+			        datasets: [{
+			            label: 'All Time',
+			            data: [data.stats["sale"].alltime, data.stats["sample"].alltime],
+			            backgroundColor: [
+			                '#f1183b',
+			                '#929091',
+			            ],
+			            borderColor: [
+			                'white',
+			                'white',
+			            ],
+			            borderWidth: 1
+			        }]
+			    },
+			    options: {
+			    	 legend :
+			         {
+			         	position:"bottom"
+			         }
+			             }        
+            })
+                    }
+    });
 }
 setInterval(createChart1,refreshTime);
 
 function createChart2()
 {
-	console.log("2");
-	$.getJSON("http://dev.virtualveda.in/h2h_api/user/stats" ,function(data)
+    $.ajax(
     {
-var ctx1 = document.getElementById("myChart2");
-var myChart2 = new Chart(ctx1, {
-    type: 'pie',
-    data: {
-        labels: ["Sale", "Sample"],
-        datasets: [{
-            label: 'All Time',
-            data: [data.stats["sale"].today, data.stats["sample"].today],
-            backgroundColor: [
-                '#f1183b',
-                '#929091',
-            ],
-            borderColor: [
-                'white',
-                'white',
-            ],
-            borderWidth: 1
-        }]
-    },
-    options: {
-         legend :
-         {
-         	position:"bottom"
-         }
-    }
-})
+    	type : 'GET',
+    	url : "http://dev.virtualveda.in/h2h_api/user/stats",
+		dataType:'json',
+		headers :
+			{
+			  'Authorization' : 'Bearer '+token
+			},
+			success : function(data)
+			{
+				console.log("2");
+			var ctx1 = document.getElementById("myChart2");
+			var myChart2 = new Chart(ctx1, {
+			    type: 'pie',
+			    data: {
+			        labels: ["Sale", "Sample"],
+			        datasets: [{
+			            label: 'All Time',
+			            data: [data.stats["sale"].today, data.stats["sample"].today],
+			            backgroundColor: [
+			                '#f1183b',
+			                '#929091',
+			            ],
+			            borderColor: [
+			                'white',
+			                'white',
+			            ],
+			            borderWidth: 1
+			        }]
+			    },
+			    options: {
+			         legend :
+			         {
+			         	position:"bottom"
+			         }
+			    }
+			})
+		}
+			
 });
 }
 setInterval(createChart2,refreshTime);
