@@ -13,11 +13,15 @@ $("#button").click(function()
     //whatever you need
     beforeSend: function (xhr) {
         xhr.setRequestHeader('Authorization', make_base_auth(name, pass));
-        xhr.setRequestHeader('Authorization', bearerToken(token));
     },
     success: function (data) {
     	console.log(data);
-    	window.load("devices.html");
+    	// window.load("devices.html");
+    	var token;
+               	token=data.token;
+               	console.log(token);
+               
+    	}
     }
 
     })
