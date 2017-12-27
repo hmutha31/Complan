@@ -58,7 +58,7 @@ function getData() //function to get JSON
     $.ajax(
     {
         type: 'GET',
-        url: 'http://dev.virtualveda.in/h2h_api/user/stats',
+        url: 'http://dev.virtualveda.in/h2h_api/calls/stats',
         dataType: 'json',
         //whatever you need
         beforeSend: function (xhr) {
@@ -104,7 +104,7 @@ console.log(token);
 	$.ajax(
 	{
 					type:'GET',
-					url : "http://dev.virtualveda.in/h2h_api/user/stats",
+					url : "http://dev.virtualveda.in/h2h_api/calls/stats",
 					dataType:'json',
 					headers :
 					{
@@ -154,7 +154,7 @@ console.log(token);
     $.ajax(
     {
     	type : 'GET',
-    	url : "http://dev.virtualveda.in/h2h_api/user/stats",
+    	url : "http://dev.virtualveda.in/h2h_api/calls/stats",
 		dataType:'json',
 		headers :
 			{
