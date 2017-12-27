@@ -60,7 +60,7 @@ console.log(token);
         },
         success : function(data,status)
         {
-        	$("tbody").html("");
+        	$("#tbody").html("");
         	$.each(data.devices,function(index,element)
          {
          	// $("#tbody").html("");
