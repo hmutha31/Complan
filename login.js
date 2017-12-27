@@ -1,10 +1,13 @@
-var name= $("#name").val();
-     var pass = $("#password").val();
+// var name= $("#name").val();
+//      var pass = $("#password").val();
 
 $(function()
 {
 $("#button").click(function()
   {
+
+  	var name= $("#name").val();
+     var pass = $("#password").val();
     $.ajax(
     {
     	type: 'POST',
@@ -16,7 +19,7 @@ $("#button").click(function()
     // },
     headers :
     {
-    	'Authorization' : 'Basic '  +  make_base_auth(name,pass)
+    	'Authorization' : 'Basic '  +  make_base_auth()
     },
     success: function (data) {
     			console.log(data);
@@ -37,17 +40,20 @@ $("#button").click(function()
 // http://dev.virtualveda.in/vv/len/h2h/api/public/user/login'
 
 	
-  function make_base_auth(user,password)
+  function make_base_auth()
   {
-  	var tok = user + ':' + password;
+  	var name= $("#name").val();
+     var pass = $("#password").val();
+     console.log(name,pass);
+  	var tok = name + ':' + pass;
     var hash = btoa(tok);
     console.log(hash);
     // $.cookie("username" , user);
     // $.cookie("password" , password);
-    document.cookie="username="+user;
-    document.cookie="password="+password;
-   var x =decodeURIComponent(document.cookie);
-    console.log(x);
+   //  document.cookie="username="+user;
+   //  document.cookie="password="+password;
+   // var x =decodeURIComponent(document.cookie);
+   //  console.log(x);
     // console.log($.cookie("username"));
     return  hash;
   }
