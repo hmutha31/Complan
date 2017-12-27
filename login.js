@@ -11,8 +11,12 @@ $("#button").click(function()
     url: "http://dev.virtualveda.in/h2h_api/user/login",
     dataType: 'json',
     //whatever you need
-    beforeSend: function (xhr) {
-        xhr.setRequestHeader('Authorization', make_base_auth(name, pass));
+    // beforeSend: function (xhr) {
+    //     xhr.setRequestHeader('Authorization', make_base_auth(name, pass));
+    // },
+    headers :
+    {
+    	'Authorization' : 'Basic' + make_base_auth(name,pass);
     },
     success: function (data) {
     			console.log(data);
