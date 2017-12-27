@@ -6,6 +6,8 @@ var refreshTime=30000;//to refresh data
         var c = ca[i];
 	console.log("readCookie c:"+c);
         while (c.charAt(0)==' ') c = c.substring(1,c.length);
+	console.log("readCookie c:"+c);
+
         if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
     }
     return null;

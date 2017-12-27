@@ -5,9 +5,9 @@ $(function()
 {
 $("#button").click(function()
   {
-  	//document.cookie="token=sometoken" ;
-  	//location.href="devices.html";
-  	//return;
+  	// document.cookie="token=sometoken" ;
+  	// location.href="devices.html";
+  	// return;
 
   	var name= $("#name").val();
      var pass = $("#password").val();
@@ -31,7 +31,7 @@ $("#button").click(function()
                	token=data.token;
                	console.log(token);
                	$("#errormsg").text("");
-               	document.cookie="token:" + data.token;
+               	document.cookie="token=" + data.token;
                	var x=document.cookie;
                	console.log(x);
                	location.href="devices.html";
