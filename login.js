@@ -31,7 +31,7 @@ $("#button").click(function()
                	document.cookie="token:" + data.token;
                	var x=document.cookie;
                	console.log(x);
-               	// location.href="devices.html";
+               	location.href="devices.html";
                
     	},
     error : function(xhr)
