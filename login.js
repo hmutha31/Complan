@@ -5,9 +5,12 @@ $(function()
 {
 $("#button").click(function()
   {
+  	//document.cookie="token=sometoken" ;
+  	//location.href="devices.html";
+  	//return;
 
-  	// var name= $("#name").val();
-   //   var pass = $("#password").val();
+  	var name= $("#name").val();
+     var pass = $("#password").val();
     $.ajax(
     {
     	type: 'POST',
@@ -44,7 +47,7 @@ $("#button").click(function()
     }
     )
 
-    })
+     })
   
 
 });
