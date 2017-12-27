@@ -60,10 +60,10 @@ console.log(token);
         },
         success : function(data,status)
         {
-        	// $("tbody").html("");
+        	$("tbody").html("");
         	$.each(data.devices,function(index,element)
          {
-         	$("#tbody").html("");
+         	// $("#tbody").html("");
            console.log("inside each");
            $("#tbody").append("<tr>" + 
            	"<td class='id'>" + element.id + "</td>" + 
