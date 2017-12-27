@@ -18,7 +18,7 @@ function _readCookie(name) {
 function getData()
 {
 	console.log("1");
-	$("#tbody").html("");
+	
 	var base_url_string="https://s3.ap-south-1.amazonaws.com/virtualveda/";
     var base_url = new URL(base_url_string);
     console.log(base_url);
