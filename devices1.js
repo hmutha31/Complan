@@ -179,5 +179,6 @@ $(function()
    getData();
    createChart1();
    createChart2();
+   console.log(document.cookie);
    // toggle();
 	});

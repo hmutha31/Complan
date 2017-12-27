@@ -37,5 +37,6 @@ function getDeviceListing()
 $(function()
   {
      getDeviceListing();
+     console.log(document.cookie);
   }
 	);

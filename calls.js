@@ -238,6 +238,7 @@ $(function()
 			$('.enlargeImageModalSource').attr('src',src);
 			$('#enlargeImageModal').modal('show');
 		});
+   console.log(document.cookie);
    
    // $(".thumb"),error(function()
    //    {
@@ -256,6 +257,7 @@ function showImage(src_string)
    	//console.log(src);
 	$('.enlargeImageModalSource').attr('src',src_string);
 	$('#enlargeImageModal').modal('show');
+
 
 }
 
