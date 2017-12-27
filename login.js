@@ -16,7 +16,7 @@ $("#button").click(function()
     // },
     headers :
     {
-    	'Authorization' : 'Basic' + '' +  make_base_auth(name,pass)
+    	'Authorization' : 'Basic '  +  make_base_auth(name,pass)
     },
     success: function (data) {
     			console.log(data);
