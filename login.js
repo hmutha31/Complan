@@ -6,8 +6,8 @@ $(function()
 $("#button").click(function()
   {
 
-  	var name= $("#name").val();
-     var pass = $("#password").val();
+  	// var name= $("#name").val();
+   //   var pass = $("#password").val();
     $.ajax(
     {
     	type: 'POST',
@@ -64,9 +64,9 @@ $("#button").click(function()
     return  hash;
   }
 
-  function bearerToken(token)
-  {
-  	document.cookie = "Bearer="+token;
-  	console.log(token);
-  	return 'Bearer' + token;
-  }
+  // function bearerToken(token)
+  // {
+  // 	document.cookie = "Bearer="+token;
+  // 	console.log(token);
+  // 	return 'Bearer' + token;
+  // }
