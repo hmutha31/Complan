@@ -49,7 +49,7 @@ $("#button").click(function()
    var x =decodeURIComponent(document.cookie);
     console.log(x);
     // console.log($.cookie("username"));
-    return 'Basic ' + hash;
+    return  hash;
   }
 
   function bearerToken(token)
