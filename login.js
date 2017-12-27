@@ -8,7 +8,7 @@ $("#button").click(function()
     $.ajax(
     {
     	type: 'POST',
-    url: "http://dev.virtualveda.in/h2h_api/user/login",
+    url: "http://dev.virtualveda.in/vv/len/h2h/api/public/user/login",
     dataType: 'json',
     //whatever you need
     // beforeSend: function (xhr) {
@@ -42,9 +42,13 @@ $("#button").click(function()
   	var tok = user + ':' + password;
     var hash = btoa(tok);
     console.log(hash);
-    $.cookie("username" , user);
-    $.cookie("password" , password);
-    console.log($.cookie("username"));
+    // $.cookie("username" , user);
+    // $.cookie("password" , password);
+    document.cookie="username="+user;
+    document.cookie="password="+password;
+   
+    console.log(document.cookie);
+    // console.log($.cookie("username"));
     return 'Basic ' + hash;
   }
 
