@@ -1,24 +1,10 @@
 var refreshTime=30000;
-function _readCookie(name) {
-    var nameEQ = name + "=";
-    var ca = document.cookie.split(';');
-     for(var i=0;i < ca.length;i++) {
-        var c = ca[i];
-	console.log("readCookie c:"+c);
-        while (c.charAt(0)==' ') c = c.substring(1,c.length);
-	console.log("readCookie c:"+c);
-
-        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
-    }
-    return null;
-}
-
 
 
 function getData()
 {
 	console.log("1");
-	
+	$("#tbody").html("");
 	var base_url_string="https://s3.ap-south-1.amazonaws.com/virtualveda/";
     var base_url = new URL(base_url_string);
     console.log(base_url);
@@ -35,24 +21,14 @@ function getData()
     	date = "/"+date;
     }
     console.log(date);
-	var api_url = "http://dev.virtualveda.in/h2h_api/mis/calls/"+c+date;
-	var url_link = new URL(api_url);
-	console.log(url_link);
+	var api_url = "http://dev.virtualveda.in/vv/len/h2h/api/public/mis/calls/"+c+date;
+	console.log(api_url);
 	var rec1_string="";
 	var rec2_string="";
 	var img_string="";
 	var i=1;
-	var token = _readCookie('token');
-	$.ajax(
-	{
-		type : 'GET',
-		dataType : 'json',
-		url : url_link,
-		beforeSend: function (xhr) {
-            xhr.setRequestHeader('Authorization', "Bearer "+token);
-        },
-        succcess : function(data)
-        {
+	$.getJSON(api_url,function(data)
+      {
         $.each(data.calls,function(index,element)
              {
              	// console.log(element.recording1);
@@ -137,10 +113,9 @@ function getData()
 
              }//end of each
         	)//end of each
-	}
-});
       
-      
+      }//end of json
+		)//end of json
 }//end of fn getData
 
 function validateObj(obj)
@@ -263,7 +238,6 @@ $(function()
 			$('.enlargeImageModalSource').attr('src',src);
 			$('#enlargeImageModal').modal('show');
 		});
-   console.log(document.cookie);
    
    // $(".thumb"),error(function()
    //    {
@@ -282,7 +256,6 @@ function showImage(src_string)
    	//console.log(src);
 	$('.enlargeImageModalSource').attr('src',src_string);
 	$('#enlargeImageModal').modal('show');
-
 
 }
 
