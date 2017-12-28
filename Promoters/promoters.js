@@ -52,7 +52,7 @@ function add_promoter()
        type : 'POST',
        dataType : 'json',
        url : 'http://dev.virtualveda.in/vv/len/h2h/api/public/user/add',
-       parameters : 
+       data : 
        {
        	'Mobile' : mobile,
        	'Password' : pass
