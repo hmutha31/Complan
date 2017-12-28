@@ -64,8 +64,8 @@ function add_promoter()
        {
           $("#tbody").append(
            	"<tr>" +
-           	"<td class='data'>" + data.mobile + "</td>" +
-           	"<td class='data'>" + data.password + "</td>" +
+           	"<td class='data'>" + mobile + "</td>" +
+           	"<td class='data'>" + password + "</td>" +
            	"</tr>"
           	)
        }
