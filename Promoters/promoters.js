@@ -20,7 +20,7 @@ function getData()
            "<td class='data'>" + element.id + "</td>" +
            "<td class='data'>" + element.mobile + "</td>" +
            "<td class='data'>" + element.password + "</td>"+
-           "<td class='delete'>" + "<button class='pure-button delete_btn' type='button'>" + "<i class="fa fa-trash" id='del' aria-hidden="true"></i>"+
+           "<td class='delete'>" + "<button class='pure-button delete_btn' type='button'>" + "<i class='fa fa-trash' id='del' aria-hidden='true'></i>"+
            "</button>" + "</td>" +  
            "</tr>"
            )
