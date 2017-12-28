@@ -43,8 +43,6 @@ function _readCookie(name) {
 
 function add_promoter()
 {
-	$("#add_btn").click(function()
-	{
 	var mobile=$("#in_mobile").val();
 	var pass=$("#in_pass").val();
 	console.log(mobile,pass);
@@ -79,7 +77,7 @@ function add_promoter()
      });//end of ajax
 
 
-	});//end of click
+	//end of click
 }
 
 $(function()
