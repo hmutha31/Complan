@@ -21,15 +21,13 @@ function getData()
            "<td class='data'>" + element.password + "</td>"+
            "</tr>"
            )
-       });
+       })//end of each
        }
 
-         })//end of each
+         });//end of ajax
        		
-       }
-	 });//end of ajax
-}//end of getData
-
+}//end of fn
+	 
 function _readCookie(name) {
     var nameEQ = name + "=";
     var ca = document.cookie.split(';');
@@ -45,8 +43,8 @@ function _readCookie(name) {
 }
 
 $(function()
-{
-    getData();
-
-	});
+  {
+     getData();
+  }
+	);
 
