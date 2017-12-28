@@ -1,5 +1,18 @@
 var refreshTime=30000;
+//code to get token 
+function _readCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+     for(var i=0;i < ca.length;i++) {
+        var c = ca[i];
+	console.log("readCookie c:"+c);
+        while (c.charAt(0)==' ') c = c.substring(1,c.length);
+	console.log("readCookie c:"+c);
 
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+}
 
 function getData()
 {
@@ -27,8 +40,19 @@ function getData()
 	var rec2_string="";
 	var img_string="";
 	var i=1;
-	$.getJSON(api_url,function(data)
-      {
+	var token = _readCookie('token');
+	$.ajax(
+	{
+        type : 'GET' ,
+        url : api_url,
+        dataType : 'json',
+        headers : 
+        {
+        	'Authorization' : 'Bearer ' +token
+        },
+        success : function(data)
+        {
+        	console.log("inside each" , api_url,token),
         $.each(data.calls,function(index,element)
              {
              	// console.log(element.recording1);
@@ -112,10 +136,16 @@ function getData()
               	)//end of append         
 
              }//end of each
-        	)//end of each
+        	);//end of each
       
-      }//end of json
-		)//end of json
+      },//end of success fn
+      error : function(xhr)
+      {
+      	console.log(xhr.status + "Error receiving data")
+      }
+		
+});//end of ajax
+
 }//end of fn getData
 
 function validateObj(obj)
