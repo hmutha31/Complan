@@ -29,6 +29,12 @@
 	color:#515356;
 	height: 12vh;
 }
+#msg
+{
+	font-size: 30px;
+	text-align: center;
+	color: #B02121;
+}
 #add_btn
 {
 	text-align: center;

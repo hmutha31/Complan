@@ -68,7 +68,13 @@ function add_promoter()
            	"<td class='data'>" + pass + "</td>" +
            	"</tr>"
           	)
+          $("#msg").text("Promoter Successfully Added !"),
           getData()
+       },
+       error : function(xhr)
+       {
+       	console.log(xhr.status,xhr.message),
+       	$("#msg").text(xhr.message)
        }
 
 
