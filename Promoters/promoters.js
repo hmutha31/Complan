@@ -76,7 +76,7 @@ function add_promoter()
        {
        	console.log(xhr.status,xhr.message),
        	$("#msg").text(""),
-       	$("#msg").text(xhr.message)
+       	$("#msg").text("User Already Exists ! ")
        }
 
 
