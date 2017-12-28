@@ -59,7 +59,7 @@ function add_promoter()
        },
        headers : 
        {
-       	'Authorization' : 'Bearer' + token1
+       	'Authorization' : 'Bearer ' + token1
        },
        success : function(data)
        {
