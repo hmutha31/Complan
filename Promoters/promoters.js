@@ -14,7 +14,6 @@ function getData()
        {
        	$.each(data.users,function(index,element)
          {
-           $("#tbody").html("");
            $("tbody").append(
            "<tr>" +
            "<td class='data'>" + element.id + "</td>" +
