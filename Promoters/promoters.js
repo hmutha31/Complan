@@ -55,8 +55,10 @@ function add_promoter()
        data : " {'mobile' : "+mobile+",'password' :"+ pass+"}",
        headers : 
        {
-       	'Authorization' : 'Bearer ' + token1
+       	'Authorization' : 'Bearer ' + token1,
+       	 'Content-Type' : 'application/json'
        },
+
        success : function(data)
        {
           $("#tbody").append(
