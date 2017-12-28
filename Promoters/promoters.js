@@ -5,6 +5,7 @@ function getData()
 	 $.ajax(
 	 {
        type : 'GET' ,
+       url : 'http://dev.virtualveda.in/vv/len/h2h/api/public/user/list',
        dataType : 'json',
        headers :
        {
