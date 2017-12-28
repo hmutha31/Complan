@@ -68,7 +68,7 @@ function add_promoter()
            	"<td class='data'>" + password + "</td>" +
            	"</tr>"
           	)
-          getData();
+          getData()
        }
 
 
