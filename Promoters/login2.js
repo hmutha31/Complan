@@ -34,7 +34,7 @@ $("#button").click(function()
                	document.cookie="token1=" + data.token;
                	var y=document.cookie;
                	console.log(y);
-               	// location.href="promoters.html";
+               	location.href="promoters.html";
                
     	},
     error : function(xhr)
