@@ -53,10 +53,11 @@ function add_promoter()
        dataType : 'json',
        url : 'http://dev.virtualveda.in/vv/len/h2h/api/public/user/add',
        data : " {'mobile' : '"+mobile+"','password' :'"+ pass+"'}",
+       contentType : 'application/json',
        headers : 
        {
-       	'Authorization' : 'Bearer ' + token1,
-       	 'Content-Type' : 'application/json'
+       	'Authorization' : 'Bearer ' + token1
+       	 // 'Content-Type' : 'application/json'
        },
 
        success : function(data)
