@@ -70,13 +70,17 @@ function add_promoter()
           	)
           $("#msg").text(""),
           $("#msg").text("Promoter Successfully Added !"),
+          $("#in_mobile").text("")
+          $("#in_pass").text("")
           getData()
        },
        error : function(xhr)
        {
        	console.log(xhr.status,xhr.message),
        	$("#msg").text(""),
-       	$("#msg").text("User Already Exists ! ")
+       	$("#msg").text("User Already Exists ! "),
+       	$("#in_mobile").text(""),
+       	$("#in_pass").text("")
        }
 
 
