@@ -1,13 +1,13 @@
 function getData()
 {
-	var token = _readCookie('token');
+	var token1 = _readCookie('token1');
 	 $.ajax(
 	 {
        type : 'GET' ,
        dataType : 'json',
        headers :
        {
-       	'Authorization' : 'Bearer ' + token
+       	'Authorization' : 'Bearer ' + token1
        },
        success : function(data)
        {

@@ -27,14 +27,14 @@ $("#button").click(function()
     success: function (data) {
     			console.log(data);
     	// window.load("devices.html");
-    	        var token;
-               	token=data.token;
-               	console.log(token);
+    	        var token1;
+               	token1=data.token;
+               	console.log(token1);
                	$("#errormsg").text("");
-               	document.cookie="token=" + data.token;
-               	var x=document.cookie;
-               	console.log(x);
-               	location.href="promoters.html";
+               	document.cookie="token1=" + data.token;
+               	var y=document.cookie;
+               	console.log(y);
+               	// location.href="promoters.html";
                
     	},
     error : function(xhr)
