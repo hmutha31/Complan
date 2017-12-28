@@ -1,0 +1,44 @@
+body
+{
+	background-image: url("complanbg.jpeg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	overflow-y: hidden;
+	
+}
+/*.form
+{
+	position: absolute;
+	top:200px;
+	left: 250px;
+}*/
+.form
+{
+	margin-left:20vw;
+	margin-right: 10vw;
+	margin-bottom: 45vh;
+	margin-top:40vh;
+}
+label
+{
+	font-size: 30px;
+	color:#B02121;
+	text-align: center;
+}
+input::placeholder
+{
+	color: #e3e3e5;
+}
+#button
+{
+	background-color: #B02121;
+	color: #e3e3e5;
+	font-size: 30px;
+	text-align: center;
+	margin-top:20px;
+}
+
+#errormsg
+{
+	color:red;
+}
