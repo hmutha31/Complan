@@ -55,4 +55,14 @@ table
 	color: #B02121;
 	font-size: 30px;
 	font-weight: bold;
+	text-align: center;
+}
+table:hover
+{
+	background-color: #e3e3e5;
+}
+.data
+{
+	font-size:20px;
+	text-align: center;
 }
