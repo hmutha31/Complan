@@ -51,7 +51,7 @@ function add_promoter()
      {
        type : 'POST',
        dataType : 'json',
-       url : 'http://dev.virtualveda.in/h2h_api/user/add',
+       url : 'http://dev.virtualveda.in/vv/len/h2h/api/public/user/add',
        parameters : 
        {
        	'Mobile' : mobile,
@@ -64,7 +64,6 @@ function add_promoter()
        success : function(data)
        {
           $("#tbody").append(
-           
            	"<tr>" +
            	"<td class='data'>" + mobile + "</td>" +
            	"<td class='data'>" + pass + "</td>" +
