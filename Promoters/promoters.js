@@ -17,7 +17,7 @@ function getData()
          {
            $("#tbody").append(
            "<tr>" +
-           "<td class='data'>" + element.id + "</td>" +
+           
            "<td class='data'>" + element.mobile + "</td>" +
            "<td class='data'>" + element.password + "</td>"+
            "</tr>"
@@ -39,6 +39,47 @@ function _readCookie(name) {
         if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
     }
     return null;
+}
+
+function add_promoter
+{
+	$("#add_btn").click(function()
+	{
+	var mobile=$("#in_mobile").val();
+	var pass=$("#in_pass").val();
+	console.log(mobile,pass);
+     var token1 = _readCookie('token1');
+     $.ajax(
+     {
+       type : 'POST',
+       dataType : 'json',
+       url : 'http://dev.virtualveda.in/h2h_api/user/add',
+       parameters : 
+       {
+       	'Mobile' : mobile,
+       	'Password' : pass
+       },
+       headers : 
+       {
+       	'Authorization' : 'Bearer' + token1
+       },
+       success : function(data)
+       {
+          $("#tbody").append(
+           
+           	"<tr>" +
+           	"<td class='data'>" + mobile + "</td>" +
+           	"<td class='data'>" + pass + "</td>" +
+           	"</tr>"
+          	)
+       }
+
+
+
+     })//end of ajax
+
+
+	})//end of click
 }
 
 $(function()
