@@ -1,0 +1,58 @@
+.header
+{
+	 background-color: #e3e3e5;
+	 text-align: center;
+}
+#title
+{
+	font-size: 30px;
+	font-weight:bold;
+	color:#B02121;
+	text-align: left;
+	margin-left :70px;
+	margin-top:40px;
+}
+.logo
+{
+	margin-left:20px;
+	margin-bottom: 10px;
+	margin-top:10px;
+}
+.input
+{
+	display: block;
+	width: 90%;
+	font-size: 20px;
+	text-align: center;
+	margin:20px;
+	border:1px solid #B02121 ;
+	color:#515356;
+	height: 8vh;
+}
+#add_btn
+{
+	text-align: center;
+	width:30vw;
+	position: relative;
+	left:400px;
+	height: 8vh;
+	font-size: 20px;
+	color: white;
+	background-color: #660f0f;
+	border-radius: 5px;
+}
+table
+{
+	direction: block;
+	width: 100%;
+	padding: 10px;
+	text-align: center;
+	margin-top: 20px;
+}
+.heading
+{
+	background-color: none;
+	color: #B02121;
+	font-size: 30px;
+	font-weight: bold;
+}
