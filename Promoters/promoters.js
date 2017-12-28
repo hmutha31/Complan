@@ -41,7 +41,7 @@ function _readCookie(name) {
     return null;
 }
 
-function add_promoter
+function add_promoter()
 {
 	$("#add_btn").click(function()
 	{
@@ -76,10 +76,10 @@ function add_promoter
 
 
 
-     })//end of ajax
+     });//end of ajax
 
 
-	})//end of click
+	});//end of click
 }
 
 $(function()
