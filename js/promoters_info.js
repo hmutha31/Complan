@@ -67,8 +67,9 @@ function add_promoter()
           	)
           $("#msg").text(""),
           $("#msg").text("Promoter Successfully Added !"),
-          $("#in_mobile").val("")
-          $("#in_pass").val("")
+          $("#in_mobile").val(""),
+          $("#in_pass").val(""),
+          $("#tbody").html(""),
           getData()
        },
        error : function(data)
