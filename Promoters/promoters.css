@@ -33,7 +33,12 @@
 {
 	font-size: 30px;
 	text-align: center;
-	color: #B02121;
+	color: #e3e3e5;
+	display: inline-block;
+	background-color: #660f0f;
+	border:1px solid #e3e3e5;
+	border-radius: 5px;
+
 }
 #add_btn
 {
@@ -41,7 +46,7 @@
 	width:30vw;
 	height: 8vh;
 	font-size: 20px;
-	color: white;
+	color: #e3e3e5;
 	background-color: #660f0f;
 	border-radius: 5px;
 	
@@ -149,6 +154,10 @@ tr:hover
 		font-size: 25px;
 		text-align: center;
 	}
+	#msg
+	{
+		display: block;
+	}
 	/*#add_btn
 	{
 		font-size: 20px;
@@ -171,6 +180,11 @@ tr:hover
         left:32vw;
         margin-bottom:20px;
         font-size: 30px;
+	}
+	#msg
+	{
+		position: relative;
+		left: 32vw;
 	}
 }
 
