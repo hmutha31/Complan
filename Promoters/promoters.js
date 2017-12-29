@@ -73,11 +73,11 @@ function add_promoter()
           $("#in_pass").val("")
           getData()
        },
-       error : function(xhr,status,error)
+       error : function(xhr,status,message)
        {
        	console.log(xhr.status,xhr.statusText),
        	$("#msg").text(""),
-       	$("#msg").text("Error : " +xhr.status +" " + error),
+       	$("#msg").text( status +" : " + message),
        	$("#in_mobile").val(""),
        	$("#in_pass").val("")
        }
