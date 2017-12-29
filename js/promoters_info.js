@@ -1,6 +1,6 @@
 function getData()
 {
-	var token1 = _readCookie('token1');
+	var token1 = _readCookie('token');
 	console.log(token1);
 	 $.ajax(
 	 {
@@ -44,7 +44,7 @@ function add_promoter()
 {
 	var mobile=$("#in_mobile").val();
 	var pass=$("#in_pass").val();
-     var token1 = _readCookie('token1');
+     var token1 = _readCookie('token');
      $.ajax(
      {
        type : 'POST',
