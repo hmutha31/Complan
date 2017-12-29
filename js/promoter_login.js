@@ -26,7 +26,7 @@ $("#button").click(function()
                	document.cookie="token1=" + data.token;
                	var y=document.cookie;
                	console.log(y);
-               	// location.href="../mis/promoters_info.html";
+               	location.href="../mis/promoters_info.html";
                
     	},
     error : function(xhr)
