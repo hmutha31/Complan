@@ -80,7 +80,7 @@ function add_promoter()
        		console.log(data.responseJSON.status,data.responseJSON.message),
        	console.log(data.status,data["message"]),
        	$("#msg").text(""),
-       	$("#msg").text( "Error" + " : " + data.responseJSON.message),
+       	$("#msg").text(   data.responseJSON.message),
        	$("#in_mobile").val(""),
        	$("#in_pass").val("")
        }
