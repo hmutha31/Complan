@@ -25,8 +25,7 @@ function getData()
        })//end of each
        }
 
-         });//end of ajax
-       		
+         });//end of ajax     		
 }//end of fn
 	 
 function _readCookie(name) {
