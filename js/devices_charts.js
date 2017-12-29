@@ -22,7 +22,7 @@ function getData() //function to get JSON
     $.ajax(
     {
         type: 'GET',
-        url: 'http://dev.virtualveda.in/h2h_api/calls/stats',
+        url: 'http://dev.virtualveda.in/vv/len/h2h/api/public/calls/stats',
         dataType: 'json',
         //whatever you need
         beforeSend: function (xhr) {
@@ -67,7 +67,7 @@ function createChart1()
 	$.ajax(
 	{
 					type:'GET',
-					url : "http://dev.virtualveda.in/h2h_api/calls/stats",
+					url : "http://dev.virtualveda.in/vv/len/h2h/api/public/calls/stats",
 					dataType:'json',
 					headers :
 					{
@@ -116,7 +116,7 @@ function createChart2()
     $.ajax(
     {
     	type : 'GET',
-    	url : "http://dev.virtualveda.in/h2h_api/calls/stats",
+    	url : "http://dev.virtualveda.in/vv/len/h2h/api/public/calls/stats",
 		dataType:'json',
 		headers :
 			{

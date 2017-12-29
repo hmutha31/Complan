@@ -17,7 +17,7 @@ function getData()
 	 $.ajax(
 	 {
        type : 'GET' ,
-       url : 'http://dev.virtualveda.in/h2h_api/device/list',
+       url : 'http://dev.virtualveda.in/vv/len/h2h/api/public/device/list',
        dataType : 'json',
        headers :
        {
@@ -52,7 +52,7 @@ function add_device()
 	{
 		type : 'POST' ,
 		dataType : 'json',
-		url : 'http://dev.virtualveda.in/h2h_api/device/add',
+		url : 'http://dev.virtualveda.in/vv/len/h2h/api/public/device/add',
 		headers :
 		{
 			'Authorization' : 'Bearer ' + token1

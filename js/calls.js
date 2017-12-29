@@ -28,8 +28,8 @@ function getData()
     	date = "/"+date;
     }
     console.log(date);
-	var api_url = "http://dev.virtualveda.in/h2h_api/mis/calls/"+c+date;
-	console.log(api_url);
+	var api_url = "http://dev.virtualveda.in/vv/len/h2h/api/public/mis/calls/"+c+date;
+	
 	var rec1_string="";
 	var rec2_string="";
 	var img_string="";

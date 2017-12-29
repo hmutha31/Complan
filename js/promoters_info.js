@@ -5,7 +5,7 @@ function getData()
 	 $.ajax(
 	 {
        type : 'GET' ,
-       url : 'http://dev.virtualveda.in/h2h_api/user/list',
+       url : 'http://dev.virtualveda.in/vv/len/h2h/api/public/user/list',
        dataType : 'json',
        headers :
        {
@@ -49,7 +49,7 @@ function add_promoter()
      {
        type : 'POST',
        dataType : 'json',
-       url : 'http://dev.virtualveda.in/h2h_api/user/add',
+       url : 'http://dev.virtualveda.in/vv/len/h2h/api/public/user/add',
        data : '{"mobile":"'+mobile+'","password":"'+pass+'"}',
        contentType : 'application/json',
        headers : 
@@ -74,10 +74,7 @@ function add_promoter()
        },
        error : function(data)
        {
-       	// $("#msg").text(""),
-       	// $("#msg").text(   data.responseJSON.message),
-       	// $("#in_mobile").val(""),
-       	// $("#in_pass").val(""),
+     
        	if(data.responseJSON.message=="Invalid or Expired Token")
        	{
        		alert(data.responseJSON.message),
@@ -90,12 +87,7 @@ function add_promoter()
        	$("#in_mobile").val(""),
        	$("#in_pass").val("")
        	}
-       	// if(data.responseJSON.message=="Invalid or Expired Token")
-       	// {
-       	// 	document.cookie="token1=''",
-       	// 	location.href="login2.html"
-       	// },
-
+       	
        }
 
 
