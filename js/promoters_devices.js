@@ -25,7 +25,7 @@ function getData()
        },
        success : function(data)
        {
-       	$.each(data.users,function(index,element)
+       	$.each(data.devices,function(index,element)
          {
            $("#tbody").append(
            "<tr>" +
