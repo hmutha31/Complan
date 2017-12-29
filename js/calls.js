@@ -5,9 +5,7 @@ function _readCookie(name) {
     var ca = document.cookie.split(';');
      for(var i=0;i < ca.length;i++) {
         var c = ca[i];
-	console.log("readCookie c:"+c);
         while (c.charAt(0)==' ') c = c.substring(1,c.length);
-	console.log("readCookie c:"+c);
 
         if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
     }
@@ -16,16 +14,13 @@ function _readCookie(name) {
 
 function getData()
 {
-	console.log("1");
 	$("#tbody").html("");
 	var base_url_string="https://s3.ap-south-1.amazonaws.com/virtualveda/";
     var base_url = new URL(base_url_string);
-    console.log(base_url);
 	var url_string = window.location.href;
 	var url = new URL(url_string);
 	var c = url.searchParams.get("device");
     var date= $("#selected_date").val(); //variable for date filter;
-    console.log(date);
     if(date==undefined || date == ""){
     	date = "";
     }
@@ -33,7 +28,7 @@ function getData()
     	date = "/"+date;
     }
     console.log(date);
-	var api_url = "http://dev.virtualveda.in/vv/len/h2h/api/public/mis/calls/"+c+date;
+	var api_url = "http://dev.virtualveda.in/h2h_api/mis/calls/"+c+date;
 	console.log(api_url);
 	var rec1_string="";
 	var rec2_string="";
@@ -51,7 +46,6 @@ function getData()
         },
         success : function(data)
         {
-        	console.log("inside each" , api_url,token),
         $.each(data.calls,function(index,element)
              {
               var rec1;
@@ -237,21 +231,17 @@ function validateFeedback(obj5)
 
 $(function()
 {
-	// $("#selected_date").val((new Date()).getFullYear()+"-"+(new Date()).getMonth()+1+"-"+(new Date()).getDate());
 	var year=new Date().getFullYear();
-	console.log(year);
 	var month=new Date().getMonth()+1;
-	console.log(month);
+	
 	var day=new Date().getDate();
-	console.log(day);
+	
 	var date=year +"-"+month+"-"+day;
 	$("#selected_date").val(date);
    getData();
    $(".thumb").click(function() {
    	var src_string=$(".thumb").attr("src");
-   	console.log(src_string);
    	var src=new URL(src_string);
-   	console.log(src);
 			$('.enlargeImageModalSource').attr('src',src);
 			$('#enlargeImageModal').modal('show');
 		});
@@ -260,8 +250,6 @@ $(function()
 
 function showImage(src_string)
 {
-	console.log('here');
-   	console.log(src_string);
 	$('.enlargeImageModalSource').attr('src',src_string);
 	$('#enlargeImageModal').modal('show');
 
