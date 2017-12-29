@@ -73,7 +73,7 @@ function add_promoter()
           $("#in_pass").val("")
           getData()
        },
-       error : function(xhr)
+       error : function(xhr,status)
        {
        	console.log(xhr.status,xhr.statusText),
        	$("#msg").text(""),
