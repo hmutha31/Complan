@@ -237,6 +237,7 @@ function validateFeedback(obj5)
 
 $(function()
 {
+	$("#selected_date").val((new Date()).getFullYear()+"-"+(new Date()).getMonth()+"-"+(new Date()).getDate());
    getData();
    $(".thumb").click(function() {
    	var src_string=$(".thumb").attr("src");
