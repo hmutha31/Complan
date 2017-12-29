@@ -73,22 +73,3 @@ tr:hover
 {
 	background-color: #e3e3e5;
 }
-#logout
-{
-	color: #B02121;
-	font-weight: bold;
-	text-align: center;
-	margin-top: 40px;
-	position: relative;
-		right:20px;
-}
-
-
-@media all and (max-width: 500px)
-{
-	#logout
-	{
-		position: relative;
-		right:20px;
-	}
-}

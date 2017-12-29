@@ -1,7 +1,7 @@
 function getData()
 {
 	var token1 = _readCookie('token');
-	console.log(token1);
+	// console.log(token1);
 	 $.ajax(
 	 {
        type : 'GET' ,

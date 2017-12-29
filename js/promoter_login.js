@@ -21,11 +21,11 @@ $("#button").click(function()
     	
     	        var token1;
                	token1=data.token;
-               	console.log(token1);
+               	// console.log(token1);
                	$("#errormsg").text("");
-               	document.cookie="token1=" + data.token;
+               	document.cookie="token=" + data.token;
                	var y=document.cookie;
-               	console.log(y);
+               	// console.log(y);
                	location.href="../admin/promoters_info.html";
                
     	},
