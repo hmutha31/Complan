@@ -74,10 +74,22 @@ function add_promoter()
        },
        error : function(data)
        {
-       	$("#msg").text(""),
+       	// $("#msg").text(""),
+       	// $("#msg").text(   data.responseJSON.message),
+       	// $("#in_mobile").val(""),
+       	// $("#in_pass").val(""),
+       	if(data.responseJSON.message=="Invalid or Expired Token")
+       	{
+       		alert(data.responseJSON.message),
+       		location.href="../admin/promoter_login.html";
+       	}
+       	else
+       	{
+       		$("#msg").text(""),
        	$("#msg").text(   data.responseJSON.message),
        	$("#in_mobile").val(""),
        	$("#in_pass").val("")
+       	}
        	// if(data.responseJSON.message=="Invalid or Expired Token")
        	// {
        	// 	document.cookie="token1=''",
