@@ -75,9 +75,12 @@ function add_promoter()
        },
        error : function(data)
        {
+       	console.log(data),
+       	console.log(data.responseText.status,data.responseText.message),
+       		console.log(data.responseJSON.status,data.responseJSON.message),
        	console.log(data.status,data["message"]),
        	$("#msg").text(""),
-       	$("#msg").text( data.status +" : " + data["message"]),
+       	$("#msg").text( "Error" + " : " + data.responseJSON.message),
        	$("#in_mobile").val(""),
        	$("#in_pass").val("")
        }
