@@ -4,9 +4,9 @@ var refreshTime=30000;//to refresh data
     var ca = document.cookie.split(';');
      for(var i=0;i < ca.length;i++) {
         var c = ca[i];
-	console.log("readCookie c:"+c);
+	
         while (c.charAt(0)==' ') c = c.substring(1,c.length);
-	console.log("readCookie c:"+c);
+	
 
         if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
     }
@@ -16,10 +16,9 @@ var refreshTime=30000;//to refresh data
 
 function getData() //function to get JSON 
 {
-	console.log("in getData");
+	
 	var token = _readCookie('token');
-	console.log(token);
-
+	
     $.ajax(
     {
         type: 'GET',
@@ -65,7 +64,6 @@ function validate(obj) //function to validate content of obj
 function createChart1()
 {
 	var token=readCookie('token');
-console.log(token);
 	$.ajax(
 	{
 					type:'GET',
@@ -115,7 +113,6 @@ setInterval(createChart1,refreshTime);
 function createChart2()
 {
 	var token=readCookie('token');
-console.log(token);
     $.ajax(
     {
     	type : 'GET',
@@ -166,6 +163,5 @@ $(function()
    getData();
    createChart1();
    createChart2();
-   console.log(document.cookie);
    
 	});

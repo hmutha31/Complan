@@ -81,7 +81,7 @@ function add_promoter()
        	if(data.responseJSON.message=="Invalid or Expired Token")
        	{
        		alert(data.responseJSON.message),
-       		location.href="../admin/promoter_login.html";
+       		location.href="../admin/index.html";
        	}
        	else
        	{

@@ -61,8 +61,8 @@ console.log(token);
 $(function()
   {
      getDeviceListing();
-     console.log(document.cookie);
+    
      var token=$.cookie("token");
-   console.log(token);
+  
   }
 	);
