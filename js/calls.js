@@ -237,7 +237,15 @@ function validateFeedback(obj5)
 
 $(function()
 {
-	$("#selected_date").val((new Date()).getFullYear()+"-"+(new Date()).getMonth()+"-"+(new Date()).getDate());
+	// $("#selected_date").val((new Date()).getFullYear()+"-"+(new Date()).getMonth()+1+"-"+(new Date()).getDate());
+	var year=new Date().getFullYear();
+	console.log(year);
+	var month=new Date().getMonth()+1;
+	console.log(month);
+	var day=new Date().getDate();
+	console.log(day);
+	var date=year +"-"+month+"-"+day;
+	$("#selected_date").val(date);
    getData();
    $(".thumb").click(function() {
    	var src_string=$(".thumb").attr("src");
