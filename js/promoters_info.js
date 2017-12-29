@@ -75,12 +75,12 @@ function add_promoter()
        	$("#msg").text(""),
        	$("#msg").text(   data.responseJSON.message),
        	$("#in_mobile").val(""),
-       	$("#in_pass").val(""),
-       	if(data.responseJSON.message=="Invalid or Expired Token")
-       	{
-       		document.cookie="token1=''",
-       		location.href="login2.html"
-       	}
+       	$("#in_pass").val("")
+       	// if(data.responseJSON.message=="Invalid or Expired Token")
+       	// {
+       	// 	document.cookie="token1=''",
+       	// 	location.href="login2.html"
+       	// },
 
        }
 
