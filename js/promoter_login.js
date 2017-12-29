@@ -26,7 +26,7 @@ $("#button").click(function()
                	document.cookie="token=" + data.token;
                	var y=document.cookie;
                	// console.log(y);
-               	location.href="../admin/promoters_info.html";
+               	location.href="../admin/info.html";
                
     	},
     error : function(xhr)
