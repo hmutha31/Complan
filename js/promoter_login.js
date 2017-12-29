@@ -1,14 +1,10 @@
-// var name= $("#name").val();
-//      var pass = $("#password").val();
+
 
 $(function()
 {
 $("#button").click(function()
   {
-  	// document.cookie="token=sometoken" ;
-  	// location.href="devices.html";
-  	// return;
-
+  	
   	var name= $("#name").val();
      var pass = $("#password").val();
     $.ajax(
@@ -16,17 +12,13 @@ $("#button").click(function()
     	type: 'POST',
     url: "http://dev.virtualveda.in/vv/len/h2h/api/public/user/login",
     dataType: 'json',
-    //whatever you need
-    // beforeSend: function (xhr) {
-    //     xhr.setRequestHeader('Authorization', make_base_auth(name, pass));
-    // },
     headers :
     {
     	'Authorization' : 'Basic '  +  make_base_auth()
     },
     success: function (data) {
     			console.log(data);
-    	// window.load("devices.html");
+    	
     	        var token1;
                	token1=data.token;
                	console.log(token1);
@@ -34,7 +26,7 @@ $("#button").click(function()
                	document.cookie="token1=" + data.token;
                	var y=document.cookie;
                	console.log(y);
-               	location.href="promoters.html";
+               	location.href="../mis/promoters_info.html";
                
     	},
     error : function(xhr)
@@ -66,10 +58,3 @@ $("#button").click(function()
    
     return  hash;
   }
-
-  // function bearerToken(token)
-  // {
-  // 	document.cookie = "Bearer="+token;
-  // 	console.log(token);
-  // 	return 'Bearer' + token;
-  // }

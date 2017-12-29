@@ -151,16 +151,7 @@ tr:hover
 		text-align: center;
 	}
 	
-	/*#add_btn
-	{
-		font-size: 20px;
-	color: white;
-	background-color: #660f0f;
-	border-radius: 5px;
-	width: 100%;
-	display: block;
-
-	}*/
+	
 }
 
 @media all and (min-width: 700px)

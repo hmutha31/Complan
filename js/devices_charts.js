@@ -13,41 +13,6 @@ var refreshTime=30000;//to refresh data
     return null;
 }
 
-// var token=readCookie('token');
-// console.log(token);
-
-// "http://dev.virtualveda.in/vv/len/h2h/api/public/calls/stats"
-
-// function getData_old() //function to get JSON 
-// {
-//    $.getJSON("http://dev.virtualveda.in/vv/len/h2h/api/public/calls/stats" ,function(data,status)
-//       {
-//           if(status=="error" || status=="notmodified" || status=="timeout" || status=="parsererror")
-//           {
-//           	console.log("check link!");
-//           }
-//           else
-//           {
-//           try
-//           {
-//           console.log("inside func");
-//           $("#completeCallsToday").text(validate(data.stats["complete_calls"].today));
-//           $("#completeCallsAllTime").text(validate(data.stats["complete_calls"].alltime));            
-//           console.log("end of row1");
-//            $("#sampleToday").text(validate(data.stats["sample"].today));
-//            $("#sampleAllTime").text(validate(data.stats["sample"].alltime));
-//            console.log("end of row2");
-//            $("#saleToday").text(validate(data.stats["sale"].today));
-//            $("#saleAllTime").text(validate(data.stats["sale"].alltime));  
-//               }
-//             catch(e)
-//             {
-//             	console.log("check api!");
-//             }
-//           }
-//     }) //brackets for JSON fn
-
-// } //end of fn getData 
 
 function getData() //function to get JSON 
 {
@@ -196,28 +161,11 @@ console.log(token);
 setInterval(createChart2,refreshTime);
 
 
-// function toggle()
-// {
-// 	var deviceTable=document.getElementById("dd");
-// 	if(deviceTable.style.display=="none")
-// 	{
-// 		deviceTable.style.display="block";
-// 		$("#buttonText").text("^");
-// 	}
-// 	else
-// 	{
-// 		deviceTable.style.display="none";
-// 		$("#buttonText").text("View Device Listing");
-// 	}
-// }
-
-//toggle2
-
 $(function()
 {
    getData();
    createChart1();
    createChart2();
    console.log(document.cookie);
-   // toggle();
+   
 	});

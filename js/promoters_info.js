@@ -1,7 +1,6 @@
 function getData()
 {
 	var token1 = _readCookie('token1');
-	console.log(token1);
 	 $.ajax(
 	 {
        type : 'GET' ,
@@ -44,7 +43,6 @@ function add_promoter()
 {
 	var mobile=$("#in_mobile").val();
 	var pass=$("#in_pass").val();
-	console.log(mobile,pass);
      var token1 = _readCookie('token1');
      $.ajax(
      {
@@ -56,7 +54,6 @@ function add_promoter()
        headers : 
        {
        	'Authorization' : 'Bearer ' + token1
-       	 // 'Content-Type' : 'application/json'
        },
 
        success : function(data)
@@ -75,14 +72,16 @@ function add_promoter()
        },
        error : function(data)
        {
-       	console.log(data),
-       	console.log(data.responseText.status,data.responseText.message),
-       		console.log(data.responseJSON.status,data.responseJSON.message),
-       	console.log(data.status,data["message"]),
        	$("#msg").text(""),
        	$("#msg").text(   data.responseJSON.message),
        	$("#in_mobile").val(""),
-       	$("#in_pass").val("")
+       	$("#in_pass").val(""),
+       	if(data.responseJSON.message=="Invalid or Expired Token")
+       	{
+       		document.cookie="token1=''",
+       		location.href="login2.html"
+       	}
+
        }
 
 
@@ -99,12 +98,4 @@ $(function()
   }
 	);
 
-// error : function(xhr,status,message)
-//        {
-//        	console.log(xhr.status,xhr.statusText),
-//        	$("#msg").text(""),
-//        	$("#msg").text( status +" : " + message),
-//        	$("#in_mobile").val(""),
-//        	$("#in_pass").val("")
-//        }
 
