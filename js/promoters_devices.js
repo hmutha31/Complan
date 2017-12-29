@@ -69,7 +69,7 @@ function add_device()
               "</tr>" 
 		 	) 
 		  $("#msg").text(""),
-          $("#msg").text("Promoter Successfully Added !"),
+          $("#msg").text("Device Successfully Added !"),
           $("#device_name").val("");
           $("#id1").val("");
           $("#id2").val("");
