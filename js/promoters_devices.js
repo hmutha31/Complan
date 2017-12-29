@@ -61,6 +61,7 @@ function add_device()
 		 data : '{"name":"'+name+'","imei1":"'+id1+'","imei2":"'+id2+'"}',
 		 success : function(data)
 		 {
+
 		 	$("#tbody").append(
               "<tr>"+
               "<td class='data'>"+ name + "</td>" +
@@ -73,6 +74,7 @@ function add_device()
           $("#device_name").val("");
           $("#id1").val("");
           $("#id2").val("");
+          $("#tbody").html("");
           getData();
 
 		 },
