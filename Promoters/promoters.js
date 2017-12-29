@@ -75,9 +75,9 @@ function add_promoter()
        },
        error : function(xhr)
        {
-       	console.log(xhr.status,xhr.message),
+       	console.log(xhr.status,xhr.statusText),
        	$("#msg").text(""),
-       	$("#msg").text("User Already Exists ! "),
+       	$("#msg").text("Error : " +xhr.status + xhr.statusText),
        	$("#in_mobile").val(""),
        	$("#in_pass").val("")
        }
