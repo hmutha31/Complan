@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Promoter Devices</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+  <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../css/promoters_devices.css">
+  <script type="text/javascript" src="../js/promoters_devices.js"></script>
+</head>
+<body>
+
+<div class="body1">
+ <div class="row header">
+ 	<div class="col-sm-3 col-md-3 col-lg-3">
+ 		<div class="logo">
+ 			<img src="../images/complanlogo.jpeg" id="logo" class="img-fluid float-right">
+ 		</div>
+ 	</div>
+ 	<div class="col-sm-8 col-md-9 col-lg-9">
+ 		<div class="title">
+ 		<h2 id="title"> Promoter's Devices </h2>
+ 	</div>
+ 	</div>
+
+ </div>
+ <br>
+ <div class="form">
+ 	<div class="row">
+ 		<div class="col-sm-4 col-md-4 col-lg-4">
+ 			<input type="text" name="name" id="device_name" class="input" placeholder="Device Name">
+ 		</div>
+ 		<div class="col-sm-4 col-md-4 col-lg-4">
+ 			<input type="text" name="imei1" id="id1" class="input" placeholder="IMEI 1" maxlength="15">
+ 		</div>
+ 		<div class="col-sm-4 col-md-4 col-lg-4">
+ 			<input type="text" name="imei2" id="id2" class="input" placeholder="IMEI 2" maxlength="15">
+ 		</div>
+ 	</div>
+ </div>
+ <div class="button">
+	<button type="button" id="add_btn" onclick="add_device()"> Add Device </button>
+</div>
+<br>
+<div class="msg">
+	<h4 id="msg"> </h4>
+</div>
+
+<div class="table">
+	<table class="table table-responsive table-bordered ">
+		<thead>
+			<tr>
+				<td class="heading"> Name </td>
+				<td class="heading"> IMEI 1 </td>
+				<td class="heading"> IMEI 2 </td>
+			</tr>
+		</thead>
+		<tbody id="tbody">
+			
+		</tbody>
+
+
+	</table>
+
+</body>
+</html>
