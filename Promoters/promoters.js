@@ -73,11 +73,11 @@ function add_promoter()
           $("#in_pass").val("")
           getData()
        },
-       error : function(xhr,status,message)
+       error : function(data)
        {
-       	console.log(xhr.status,xhr.statusText),
+       	console.log(data.status,data.message),
        	$("#msg").text(""),
-       	$("#msg").text( status +" : " + message),
+       	$("#msg").text( data.status +" : " + data.message),
        	$("#in_mobile").val(""),
        	$("#in_pass").val("")
        }
@@ -95,4 +95,13 @@ $(function()
      getData();
   }
 	);
+
+// error : function(xhr,status,message)
+//        {
+//        	console.log(xhr.status,xhr.statusText),
+//        	$("#msg").text(""),
+//        	$("#msg").text( status +" : " + message),
+//        	$("#in_mobile").val(""),
+//        	$("#in_pass").val("")
+//        }
 
