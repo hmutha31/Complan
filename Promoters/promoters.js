@@ -77,7 +77,7 @@ function add_promoter()
        {
        	console.log(xhr.status,xhr.statusText),
        	$("#msg").text(""),
-       	$("#msg").text("Error : " +xhr.status + xhr.statusText),
+       	$("#msg").text("Error : " +xhr.status +" " + xhr.message),
        	$("#in_mobile").val(""),
        	$("#in_pass").val("")
        }
