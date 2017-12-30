@@ -85,7 +85,7 @@ input
 }
 .rec
 {
-	display: inline;
+	display: block;
 }
 
 /*adding media queries*/
