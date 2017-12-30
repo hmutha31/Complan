@@ -5,7 +5,7 @@ function getData()
 	 $.ajax(
 	 {
        type : 'GET' ,
-       url : 'http://dev.virtualveda.in/vv/len/h2h/api/public/user/list',
+       url : 'http://dev.virtualveda.in/h2h_api/user/list',
        dataType : 'json',
        headers :
        {
@@ -49,7 +49,7 @@ function add_promoter()
      {
        type : 'POST',
        dataType : 'json',
-       url : 'http://dev.virtualveda.in/vv/len/h2h/api/public/user/add',
+       url : 'http://dev.virtualveda.in/h2h_api/user/add',
        data : '{"mobile":"'+mobile+'","password":"'+pass+'"}',
        contentType : 'application/json',
        headers : 

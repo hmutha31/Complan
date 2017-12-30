@@ -10,7 +10,7 @@ $("#button").click(function()
     $.ajax(
     {
     	type: 'POST',
-    url: "http://dev.virtualveda.in/vv/len/h2h/api/public/user/login",
+    url: "http://dev.virtualveda.in/h2h_api/user/login",
     dataType: 'json',
     headers :
     {
