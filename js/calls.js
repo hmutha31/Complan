@@ -193,7 +193,7 @@ function validateRec(obj)
 		}
 		else
 		{
-			return("<audio controls preload='none'>" + "<source src='"+obj+"'>"+ "</audio>");
+			return("<audio controls preload='none' class='rec'>" + "<source src='"+obj+"'>"+ "</audio>");
 		}
 	}
 	catch(e)
