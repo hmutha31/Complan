@@ -15,7 +15,7 @@ function readCookie(name) {
 function getDeviceListing()
 {
 	var token=readCookie('token');
-console.log(token);
+// console.log(token);
 	$.ajax(
 	{
        type : 'GET' ,
@@ -31,7 +31,7 @@ console.log(token);
         	$.each(data.devices,function(index,element)
          {
          	// $("#tbody").html("");
-           console.log("inside each");
+           // console.log("inside each");
            $("#tbody").append("<tr>" + 
            	"<td class='id'>" + element.id + "</td>" + 
            	"<td class='name'><a  target='_blank' href='calls.html?device=" + element.id + "'>" + element.name + "</a></td>" + 

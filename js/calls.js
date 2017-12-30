@@ -27,7 +27,7 @@ function getData()
     else{
     	date = "/"+date;
     }
-    console.log(date);
+    // console.log(date);
 	var api_url = "http://dev.virtualveda.in/vv/len/h2h/api/public/mis/calls/"+c+date;
 	
 	var rec1_string="";
@@ -119,9 +119,9 @@ function getData()
         	);//end of each
       
       },//end of success fn
-      error : function(xhr)
+      error : function(data)
       {
-      	console.log(xhr.status + "Error receiving data")
+      	console.log(data.responseJSON.status +" "+ data.responseJSON.message)
       }
 		
 });//end of ajax

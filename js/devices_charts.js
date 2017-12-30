@@ -32,17 +32,17 @@ function getData() //function to get JSON
         {
           if(status=="error" || status=="notmodified" || status=="timeout" || status=="parsererror")
           {
-            console.log("check link!");
+            console.log(status);
           }
           else
           {
-                  console.log("inside func");
+                  // console.log("inside func");
                   $("#completeCallsToday").text(validate(data.stats["complete_calls"].today));
                   $("#completeCallsAllTime").text(validate(data.stats["complete_calls"].alltime));            
-                  console.log("end of row1");
+                  // console.log("end of row1");
                    $("#sampleToday").text(validate(data.stats["sample"].today));
                    $("#sampleAllTime").text(validate(data.stats["sample"].alltime));
-                   console.log("end of row2");
+                   // console.log("end of row2");
                    $("#saleToday").text(validate(data.stats["sale"].today));
                    $("#saleAllTime").text(validate(data.stats["sale"].alltime));  
           }
@@ -75,7 +75,7 @@ function createChart1()
 					},
 					success : function(data)
 					{
-				console.log("1");
+				// console.log("1");
 				var chartRefresh=10000;
 			    
 			var ctx = document.getElementById("myChart1");
@@ -124,7 +124,7 @@ function createChart2()
 			},
 			success : function(data)
 			{
-				console.log("2");
+				// console.log("2");
 			var ctx1 = document.getElementById("myChart2");
 			var myChart2 = new Chart(ctx1, {
 			    type: 'pie',
