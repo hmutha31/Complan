@@ -49,9 +49,10 @@ console.log(token);
 
         	)//end of each loop
         },
-        error : function(xhr)
+        error : function(data)
         {
-        	console.log(xhr.status , ": Error in fetching data ")
+        	alert(data.responseJSON.message ),
+        	location.href="../mis/index.html"
         }
 	});
 }
